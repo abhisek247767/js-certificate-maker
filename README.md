@@ -1,2 +1,2 @@
-# QuickValidate
-Robust and extensible data validation for NodeJs. Features include email, phone, URL, and custom regex-based validations to ensure data quality at scale
+# create-cert-pdf
+Generate professional PDF certificates programmatically with this npm module. Supports dynamic data, custom templates, and various styling options for awards, diplomas, and more.
