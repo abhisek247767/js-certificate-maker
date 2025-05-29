@@ -1,0 +1,31 @@
+{
+  "name": "js-certificate-maker",
+  "version": "0.0.1",
+  "author": "Abhisek Roy <abhisekroy169@gmail.com>",
+  "description": "A package to generate PDF certificates with custom names and styling",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "certificate",
+    "pdf",
+    "generator"
+  ],
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhisek247767/js-certificate-maker.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhisek247767/js-certificate-maker/issues"
+  },
+  "homepage": "https://github.com/abhisek247767/js-certificate-maker#readme"
+}
