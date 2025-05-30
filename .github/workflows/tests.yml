@@ -12,5 +12,5 @@ jobs:
         with:
           node-version: "20"
           cache: bun
-      - run: bun install
-      - run: bun run lint
+      - run: npm install
+      - run: npm run lint
