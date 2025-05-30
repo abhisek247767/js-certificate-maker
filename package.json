@@ -15,10 +15,10 @@
   ],
   "dependencies": {
     "@pdf-lib/fontkit": "^1.1.1",
+    "burns": "^2.3.0",
     "pdf-lib": "^1.17.1"
   },
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abhisek247767/js-certificate-maker.git"
