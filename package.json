@@ -6,7 +6,11 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc && bun build ",
+    "build": "tsc && bun build ",
+    "lint": "tsc",
+    "size": "size-limit",
+    "prepublishOnly": "bun run build"
   },
   "keywords": [
     "certificate",
