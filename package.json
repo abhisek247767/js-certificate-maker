@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "@pdf-lib/fontkit": "^1.1.1",
+    "bun": "^1.2.15",
     "burns": "^2.3.0",
     "pdf-lib": "^1.17.1"
   },
