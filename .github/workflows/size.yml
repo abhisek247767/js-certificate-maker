@@ -17,10 +17,10 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun  install
 
       - name: Build project
-        run: npm run build
+        run: bun run build
 
       - name: Run size-limit
         uses: andresz1/size-limit-action@v1
