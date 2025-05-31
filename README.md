@@ -5,7 +5,7 @@ A Node.js package to generate personalized certificates in PDF format.
 ## Installation
 
 ```bash
-npm install certificate-generator
+npm i js-certificate-maker
 ```
 
 ## Features
