@@ -1,6 +1,6 @@
 {
-  "name": "@abhisek247767/js-certificate-maker",  // Scoped name for GitHub Packages
-  "version": "0.0.7",  // Bumped version (since 0.0.6 failed)
+  "name": "@abhisek247767/js-certificate-maker", 
+  "version": "0.0.7",  
   "author": "Abhisek Roy <abhisekroy169@gmail.com>",
   "description": "A package to generate PDF certificates with custom names and styling",
   "module": "index.ts",
@@ -31,6 +31,6 @@
   "homepage": "https://github.com/abhisek247767/js-certificate-maker#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
-    "access": "public"  // Required for scoped packages
+    "access": "public" 
   }
 }
