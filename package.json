@@ -1,5 +1,5 @@
 {
-  "name": "@abhisek247767/js-certificate-maker",
+  "name": "js-certificate-maker",
   "version": "0.0.7",
   "author": "Abhisek Roy <abhisekroy169@gmail.com>",
   "description": "A package to generate PDF certificates with custom names and styling",
