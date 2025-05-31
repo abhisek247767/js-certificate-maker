@@ -1,5 +1,5 @@
 {
-  "name": "@abhisek247767/js-certificate-maker",
+  "name": "js-certificate-maker",
   "version": "0.0.6",
   "author": "Abhisek Roy <abhisekroy169@gmail.com>",
   "description": "A package to generate PDF certificates with custom names and styling",
@@ -28,9 +28,5 @@
   "bugs": {
     "url": "https://github.com/abhisek247767/js-certificate-maker/issues"
   },
-  "homepage": "https://github.com/abhisek247767/js-certificate-maker#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  }
+  "homepage": "https://github.com/abhisek247767/js-certificate-maker#readme"
 }
