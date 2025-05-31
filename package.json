@@ -1,6 +1,6 @@
 {
   "name": "js-certificate-maker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Abhisek Roy <abhisekroy169@gmail.com>",
   "description": "A package to generate PDF certificates with custom names and styling",
   "module": "index.ts",
