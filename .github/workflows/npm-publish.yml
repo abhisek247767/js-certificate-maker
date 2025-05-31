@@ -12,6 +12,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Validate package.json
+        run: |
+          if ! jq empty package.json; then
+            echo "::error::package.json is invalid JSON"
+            exit 1
+          fi
       - run: npm ci
 
   publish-npm:
@@ -23,35 +29,9 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      
-      # Debugging: Verify NPM_TOKEN is available
-      - name: Check NPM_TOKEN exists
-        run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "::error::NPM_TOKEN is not set!"
-            exit 1
-          else
-            echo "NPM_TOKEN is available"
-          fi
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
-      # Explicit auth setup
-      - name: Configure npm authentication
-        run: echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - run: npm ci
-      
-      # Verify auth works
-      - name: Verify npm whoami
-        run: npm whoami --registry=https://registry.npmjs.org
-      
-      - name: Publish to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
 
   publish-gpr:
     needs: build
@@ -62,33 +42,9 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-          scope: "@abhisek247767"  # Your GitHub username
-      
-      # Debugging: Verify GITHUB_TOKEN is available
-      - name: Check GitHub Token
-        run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "::error::GitHub token is not set!"
-            exit 1
-          else
-            echo "GitHub token is available"
-          fi
-      
-      # Configure GitHub Packages auth
-      - name: Configure GitHub Packages auth
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
+          scope: "@abhisek247767"
+      - run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
           echo "@abhisek247767:registry=https://npm.pkg.github.com" >> ~/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
       - run: npm ci
-      
-      # Verify GPR auth
-      - name: Verify GitHub Packages auth
-        run: npm whoami --registry=https://npm.pkg.github.com
-      
-      - name: Publish to GitHub Packages
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm publish
