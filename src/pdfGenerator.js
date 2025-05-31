@@ -60,8 +60,8 @@ export const generateCertificates = async (
     names,
     outputDir,
     fontColor,
-    xm, // Default x-offset
-    ym // Default y-offset
+    xm, 
+    ym 
 ) => {
     console.time("Certificates");
     const capitalizedNames = names
