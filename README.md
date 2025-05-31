@@ -61,13 +61,13 @@ Contributions are welcome! Please feel free to submit pull requests or issues.
 1. Fork and Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/certificate-generator-js.git
+   git clone https://github.com/yourusername/js-certificate-maker.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd certificate-generator-js
+   cd js-certificate-maker
    ```
 
 3. Install dependencies:
